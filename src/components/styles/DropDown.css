@@ -1,0 +1,69 @@
+.dropdown {
+  position: relative;
+  height: 100%;
+  width: 10%;
+  margin-left: 2%;
+  background-color: black;
+  color: white;
+  min-width: 80px;
+}
+
+.menu {
+  position: absolute;
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.menu > li {
+  margin: 0;
+  background-color: black;
+}
+
+.menu > li:hover {
+  background-color: lightgray;
+}
+
+.menu > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+
+  background-color: rgba(128, 128, 128, 0.336);
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.dropDownButton {
+  height: 100%;
+  width: 100%;
+  border-radius: 5%;
+  border-width: 0;
+  text-align: left;
+  background-color: rgba(128, 128, 128, 0.336);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttonClass {
+  width: 80%;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.336);
+}
+
+.dropDownLogo {
+  width: 20%;
+}
+
+.buttonText {
+  width: 80%;
+  color: white;
+}

@@ -1,13 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import FinancialList from "./pages/FinancialList";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<App />} />
+        <Route
+          path="/agriculture"
+          element={<FinancialList itemType={"agriculture"} />}
+        />
+        <Route
+          path="/realestate"
+          element={<FinancialList itemType={"realestate"} />}
+        />
+        <Route 
+          path="/stocks" 
+          element={<FinancialList itemType={"stocks"} />} 
+        />
+        <Route
+          path="/commodities"
+          element={<FinancialList itemType={"commodities"} />}
+        />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
