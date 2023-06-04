@@ -23,6 +23,8 @@ const FinancialList = (props) => {
       .then((result) => {
         console.log(result.data);
         setFinancialElements(result.data);
+        setPriceOrder("None")
+        setRatingOrder("None")
       });
   }, [props]);
 
@@ -56,14 +58,16 @@ const FinancialList = (props) => {
             selected={priceOrder}
             name="Price"
           />
-          <div className="listHeading">{itemDetails[props.itemType].headline}</div>
+          <div className="listHeading">
+            {itemDetails[props.itemType].headline}
+          </div>
         </div>
         <div></div>
         <div className="Items">
           <div className="financialItem">
             <div className="itemName">Name</div>
-            <div className="itemCost">Cost</div>
             <div className="itemRating">Rating</div>
+            <div className="itemCost">Price (₹)</div>
             <div className="payButtonNoColor"></div>
           </div>
           <hr className="hrNormal"></hr>
@@ -77,8 +81,8 @@ const FinancialList = (props) => {
                 key={item.id}
               >
                 <div className="itemName">{item.name}</div>
-                <div className="itemCost">{item.price}</div>
                 <div className="itemRating">{item.rating}</div>
+                <div className="itemCost">{item.price}</div>
                 <button className="payButton">Invest</button>
               </div>
             );
